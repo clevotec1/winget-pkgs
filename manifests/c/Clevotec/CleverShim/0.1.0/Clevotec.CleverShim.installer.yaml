@@ -1,0 +1,27 @@
+# Created with clevershim release workflow
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.10.0.schema.json
+
+PackageIdentifier: Clevotec.CleverShim
+PackageVersion: 0.1.0
+Platform:
+  - Windows.Desktop
+MinimumOSVersion: 10.0.17763.0
+InstallerType: exe
+Scope: user
+InstallModes:
+  - interactive
+  - silent
+  - silentWithProgress
+UpgradeBehavior: install
+Commands:
+  - clevershim
+ReleaseDate: 2026-10-06
+Installers:
+  - Architecture: x64
+    InstallerUrl: https://github.com/clevotec/clevershim/releases/download/v0.1.0/clevershim-x86_64-pc-windows-msvc.exe
+    InstallerSha256: efe0c50a9a066ff53cda33161acfefe0c856b887ef2925a5e19621f879e4438e
+    InstallerSwitches:
+      Silent: /install
+      SilentWithProgress: /install
+ManifestType: installer
+ManifestVersion: 1.10.0
